@@ -7,7 +7,6 @@ import logging
 import asyncio
 import sqlite3
 from datetime import datetime
-from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, Router, F
 from aiogram.filters import Command
 from aiogram.types import (
@@ -17,8 +16,6 @@ from aiogram.types import (
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-
-load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 MASTER_ADMIN_ID = int(os.getenv("MASTER_ADMIN_ID", 0))
