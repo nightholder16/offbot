@@ -1291,7 +1291,7 @@ async def _resolve_target(arg: str):
 async def start_cmd(message: Message):
     add_user(message.from_user.id, message.from_user.username or "")
 
-  await message.answer(
+    await message.answer(
     """👋 <b>Привет!</b>
 
 Это <b>бизнес-бот для NFT-офферов</b>.
