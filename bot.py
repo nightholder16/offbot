@@ -724,7 +724,7 @@ async def cb_accept(callback: CallbackQuery):
 
     chat_id = callback.message.chat.id
     old_msg_id = callback.message.message_id
- conn_id = offer.get("business_connection_id")
+    conn_id = offer.get("business_connection_id")
 
     # --- РУССКИЙ: обновляем сообщение напрямую у клиента ---
   
