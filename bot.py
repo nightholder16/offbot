@@ -729,9 +729,10 @@ async def cb_accept(callback: CallbackQuery):
     # --- РУССКИЙ: обновляем сообщение напрямую у клиента ---
   
     try:
-        await bot.delete_message(
-            chat_id=chat_id, message_id=old_msg_id, business_connection_id=conn_id
-        )
+    await bot.delete_business_messages(
+    business_connection_id=conn_id,
+    message_ids=[old_msg_id]
+)
     except Exception as e:
         logging.error(f"Не удалось удалить старое сообщение: {e}")
 
