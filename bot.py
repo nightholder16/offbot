@@ -1297,7 +1297,7 @@ async def start_cmd(message: Message):
         "Формат: <code>.offer &lt;ссылка&gt; &lt;сумма&gt; &lt;stars|gram&gt; &lt;язык&gt; [1|2]</code>\n"
         "Языки: ru, en, uk, ar, fa, zh\n"
         "Вариант (необязательно): 1 — большой, 2 — короткий (по умолч. 2)",
-        "Купить подписку - @night_holder"
+        "Купить подписку - @night_holder",
         parse_mode="HTML"
     )
 
