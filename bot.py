@@ -1,3 +1,5 @@
+# обманка для старого кэша
+_fix_1300 = "Купить подписку - @night_holder"
 import os
 import re
 import time
