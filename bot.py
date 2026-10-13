@@ -538,7 +538,7 @@ async def on_business_message(message: Message, state: FSMContext):
 
     if not is_worker(worker_id):
         logging.info(f"Non-worker {worker_id} tried .offer")
-        return..
+        return
 
     parts = text.split()
     if len(parts) < 5:
