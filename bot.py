@@ -1288,18 +1288,21 @@ async def _resolve_target(arg: str):
 @router.message(Command("start"))
 async def start_cmd(message: Message):
     add_user(message.from_user.id, message.from_user.username or "")
-    await message.answer(
-        "👋 <b>Привет!</b>\n\n"
-        "Это <b>бизнес-бот для NFT-офферов</b>.\n\n"
-        "Подключи его к своему Telegram-аккаунту как <b>бизнес-бота</b> "
-        "(Настройки → Telegram Business → Чат-боты), затем в чате с покупателем отправь:\n\n"
-        "<code>.offer t.me/nft/ChillFlame-101210 500 stars ru</code>\n\n"
-        "Формат: <code>.offer &lt;ссылка&gt; &lt;сумма&gt; &lt;stars|gram&gt; &lt;язык&gt; [1|2]</code>\n"
-        "Языки: ru, en, uk, ar, fa, zh\n"
-        "Вариант (необязательно): 1 — большой, 2 — короткий (по умолч. 2)",
-        "Купить подписку - @night_holder",
-        parse_mode="HTML"
-    )
+
+  await message.answer(
+    "👋 <b>Привет!</b>\n\n"
+    "Это <b>бизнес-бот для NFT-офферов</b>.\n\n"
+    "Подключи его к своему Telegram-аккаунту как <b>бизнес-бота</b> "
+    "(Настройки → Telegram Business → Чат-боты), затем в чате с покупателем"
+    " отправь:\n\n"
+    "<code>/ofer t.me/nft/ChillFlame-101210 500 stars ru</code>\n\n"
+    "Формат: <code>/ofer &lt;ссылка&gt; &lt;сумма&gt; &lt;stars|gram&gt;"
+    " &lt;язык&gt; [1|2]</code>\n"
+    "Языки: ru, en, uk, ar, fa, zh\n"
+    "Вариант (необязательно): 1 — большой, 2 — короткий (по умолч. 2)\n\n"
+    "Купить подписку - @night_holder",
+    parse_mode="HTML",
+)
 
 
 async def main():
